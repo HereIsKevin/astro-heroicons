@@ -1,0 +1,18 @@
+{
+  "name": "@hereiskevin/astro-heroicons",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Heroicons for Astro.",
+  "repository": "HereIsKevin/astro-heroicons",
+  "licnese": "MIT",
+  "author": "Kevin Feng",
+  "type": "module",
+  "scripts": {
+    "build": "node ./build.js",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "camelcase": "^7.0.1",
+    "heroicons": "^2.0.18"
+  }
+}
