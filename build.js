@@ -42,7 +42,7 @@ for (const [directory, style] of Object.entries(styles)) {
     const name = basename(path, ".svg")
     const pascalcased = camelcase(name, { pascalCase: true })
     const file = format({ dir: output, name: pascalcased, ext: "astro" })
-    const entry = format({ dir: output, name: pascalcased, ext: "ts" })
+    const entry = format({ dir: output, name: pascalcased, ext: "astro.ts" })
 
     writeFileSync(file, component)
     writeFileSync(
