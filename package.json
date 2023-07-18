@@ -7,6 +7,11 @@
   "license": "MIT",
   "author": "Kevin Feng",
   "type": "module",
+  "exports": {
+    "./mini": "./mini/index.js",
+    "./outline": "./outline/index.js",
+    "./solid": "./solid/index.js"
+  },
   "scripts": {
     "build": "node ./build.js",
     "prepare": "npm run build"
