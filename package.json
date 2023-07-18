@@ -7,11 +7,6 @@
   "license": "MIT",
   "author": "Kevin Feng",
   "type": "module",
-  "exports": {
-    "./mini/*.astro": "./mini/*.js",
-    "./outline/*.astro": "./outline/*.js",
-    "./solid/*.astro": "./solid/*.js"
-  },
   "scripts": {
     "build": "node ./build.js",
     "prepare": "npm run build"
