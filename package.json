@@ -4,7 +4,7 @@
   "private": true,
   "description": "Heroicons for Astro.",
   "repository": "HereIsKevin/astro-heroicons",
-  "licnese": "MIT",
+  "license": "MIT",
   "author": "Kevin Feng",
   "type": "module",
   "scripts": {
