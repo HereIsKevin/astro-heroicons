@@ -31,7 +31,6 @@ for (const [directory, style] of Object.entries(styles)) {
   mkdirSync(output, { recursive: true })
 
   const icons = readdirSync(input)
-  const entries = []
 
   for (const icon of icons) {
     const path = join(input, icon)
@@ -43,15 +42,13 @@ for (const [directory, style] of Object.entries(styles)) {
     const name = basename(path, ".svg")
     const pascalcased = camelcase(name, { pascalCase: true })
     const file = format({ dir: output, name: pascalcased, ext: "astro" })
+    const entry = format({ dir: output, name: pascalcased, ext: "ts" })
 
     writeFileSync(file, component)
-    entries.push(
-      `export { default as ${pascalcased} } from "./${pascalcased}.astro"`,
+    writeFileSync(
+      entry,
+      `export { default } from "./${pascalcased}.astro"
+`,
     )
   }
-
-  const entryPath = join(output, "index.js")
-  const entry = entries.join("\n") + "\n"
-
-  writeFileSync(entryPath, entry)
 }

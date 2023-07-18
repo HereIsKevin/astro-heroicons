@@ -8,9 +8,9 @@
   "author": "Kevin Feng",
   "type": "module",
   "exports": {
-    "./mini": "./mini/index.js",
-    "./outline": "./outline/index.js",
-    "./solid": "./solid/index.js"
+    "./mini/*.astro": "./mini/*.js",
+    "./outline/*.astro": "./outline/*.js",
+    "./solid/*.astro": "./solid/*.js"
   },
   "scripts": {
     "build": "node ./build.js",
